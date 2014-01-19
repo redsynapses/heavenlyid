@@ -5,7 +5,7 @@ define(function (require) {
     var $                   = require('jquery'),
         _                   = require('underscore'),
         Backbone            = require('backbone'),
-        tpl                 = require('text!tpl/DealerList.html'),
+        tpl                 = require('text!tpl/CarList.html'),
 
         template = _.template(tpl);
 
@@ -17,7 +17,7 @@ define(function (require) {
         },
 
         render: function () {
-            this.$el.html(template({dealers: this.collection.toJSON()}));
+            this.$el.html(template({cars: this.collection.toJSON()}));
             return this;
         }
     });

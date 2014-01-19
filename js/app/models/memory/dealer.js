@@ -7,8 +7,11 @@ define(function (require) {
 
         dealers = [
             {"id": 1, "name": "Nissan", "officePhone": "781-000-0001", "city": "Atlanta, GA", "street": "1234 Roswell Rd", "zipCode":"30188"},
-            {"id": 2, "name": "VW", "officePhone": "781-000-0002", "city": "Atlanta, GA", "street": "2345 Roswell Rd", "zipCode":"30222"}
+            {"id": 2, "name": "VW", "officePhone": "781-000-0002", "city": "Atlanta, GA", "street": "2345 Roswell Rd", "zipCode":"30222"},
+            {"id": 3, "name": "Volvo", "officePhone": "781-000-0002", "city": "Atlanta, GA", "street": "2345 Roswell Rd", "zipCode":"30222"}
+
         ],
+
 
         findById = function (id) {
             var deferred = $.Deferred(),
@@ -38,7 +41,7 @@ define(function (require) {
         Dealer = Backbone.Model.extend({
 
             initialize: function () {
-                //this.reports = new ReportsCollection();
+                //this.cars = new CarsCollection();
                 //this.reports.parent = this;
             },
 
