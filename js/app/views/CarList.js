@@ -4,6 +4,7 @@ define(function (require) {
 
     var $                   = require('jquery'),
         _                   = require('underscore'),
+        models              = require('app/models/memory/car'),
         Backbone            = require('backbone'),
         tpl                 = require('text!tpl/CarList.html'),
 
@@ -13,6 +14,7 @@ define(function (require) {
 
         initialize: function () {
             this.render();
+            this.collection = new models.CarCollection();
             this.collection.on("reset", this.render, this);
         },
 

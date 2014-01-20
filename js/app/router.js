@@ -15,7 +15,8 @@ define(function (require) {
 
         routes: {
             "": "home",
-            "carList/:dealerId": "dealerDetails",
+            "dealers/:dealerId": "dealerDetails",
+            "dealers/:dealerId/dealerCars": "dealerCars",
             "employees/:id": "employeeDetails",
             "employees/:id/reports": "reports"
         },
@@ -36,6 +37,17 @@ define(function (require) {
             });
         },
 
+        dealerCars: function (dealerId) {
+            require(["app/models/car", "app/views/CarList"], function (models, CarListView) {
+                var cars = new models.CarCollection({dealerId: dealerId});
+                cars.fetch({
+                    success: function (data) {
+                        slider.slidePage(new CarListView({collection: data}).$el);
+                    },
+                    data: {dealerId: dealerId}
+                });
+            });
+        },
 
         employeeDetails: function (id) {
             require(["app/models/employee", "app/views/Employee"], function (models, EmployeeView) {

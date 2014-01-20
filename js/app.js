@@ -9,7 +9,10 @@ require.config({
 
     map: {
         '*': {
-            'app/models/employee': 'app/models/memory/employee'
+            'app/models/employee': 'app/models/memory/employee',
+            'app/models/dealer': 'app/models/memory/dealer',
+            'app/models/car': 'app/models/memory/car',
+
         }
     },
 
