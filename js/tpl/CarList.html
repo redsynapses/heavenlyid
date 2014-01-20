@@ -1,0 +1,9 @@
+<ul class="topcoat-list list">
+<% _.each(cars, function(car) { %>
+    <li class="topcoat-list__item">
+        <a href="#dealers/<%= dealer.id %>">
+            <p><%= car.name %></p>
+        </a>
+    </li>
+<% }); %>
+</ul>
