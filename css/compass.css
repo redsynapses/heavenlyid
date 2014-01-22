@@ -1,0 +1,39 @@
+/* Add styling to compass page and rotating element - G.P. */
+.compass_container {
+		  position: relative; /*  */
+}
+#arrow_img {
+		  margin-left: 30px;
+		  margin-top: 20px;
+}
+#compass_bg { 
+		  position: relative; 
+		  width: 100%; /* for IE 6 */
+		  width:115px; /* this set container size for child element #compass_status */
+		  height:115px; /* this set container size for child element #compass_status */
+		  margin-left: 30px;
+		  margin-top: -62px; /* IMPORTANT!!! */
+}  
+#compass_status {
+		  position:absolute;
+		  width:62px;
+		  left:50%; /* top left corner set to x=0 (X,Y) */
+		  top:65%; /* top left corner set to y=0+15% lower (X,Y) */
+		  transform:translate(-50%,-50%);
+		  -webkit-transform:translate(-50%,-50%); /* translate(X,Y) */
+		  text-align:center;
+		  
+		  color:yellow;
+		  background: rgb(0, 0, 0); /* fallback color */
+		  background: rgba(0, 0, 0, 0.4);
+		  
+		  -moz-border-radius: 10px;
+		  -webkit-border-radius: 10px;
+		  border-radius: 10px; 
+		  -khtml-border-radius: 10px; /* Konqueror browsers */
+		  padding:5px;
+		  
+		  z-index:100;
+		  font-weight:bold;
+		  text-transform:uppercase;
+  }
